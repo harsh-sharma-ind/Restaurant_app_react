@@ -1,0 +1,139 @@
+header img {
+    float: left;
+    display: block;
+    height: 24px;
+    cursor: pointer;
+    margin-right: 8px;
+    color: white;
+    filter: brightness(0) invert(1);
+    padding-left: 30px;
+  
+}
+
+header{
+    background-color: blue;
+    display: flex;
+    justify-content: flex-start;
+    align-items:center ;
+    padding: 8pxpx 10px;
+    margin-right: auto;
+    
+    
+}
+
+header p{
+    color: white;
+    font-size: 24px;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+
+
+
+/* Design */
+
+
+html {
+  background-color: #ecf9ff;
+}
+
+body {
+  color: #272727;
+  font-family: 'Quicksand', serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  padding: 1rem;
+}
+
+.main{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.btn {
+    background-color: blueviolet;
+    border: none;
+    color: white;
+    padding: 6px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards_item {
+  display: flex;
+  padding: 1rem;
+}
+
+@media (min-width: 40rem) {
+  .cards_item {
+    width: 50%;
+  }
+}
+
+@media (min-width: 56rem) {
+  .cards_item {
+    width: 33.3333%;
+  }
+}
+
+.card {
+  
+  border-radius: 0.25rem;
+  
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.card_content {
+  padding: 1rem;
+  
+}
+
+.card_title {
+  color: black;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  margin: 0px;
+}
+
+.card_text {
+  color: black;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;    
+  font-weight: 400;
+}
+
+Link{
+  color: white;
+}
+

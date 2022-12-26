@@ -1,0 +1,60 @@
+/*set border to the form*/
+     
+form {
+    border: 3px solid #f1f1f1;
+}
+/*assign full width inputs*/
+ 
+input[type=text],
+input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+/*set a style for the buttons*/
+ 
+.lg {
+    width: auto;
+    padding: 10px 18px;
+    background-color: green;
+    color: white;
+}
+/* set a hover effect for the button*/
+ 
+
+ 
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+    color: white;
+}
+/*centre the display image inside the container*/
+ 
+
+ 
+
+ 
+.container {
+    padding: 16px;
+}
+/*set the forgot password text*/
+ 
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+/*set styles for span and cancel button on small screens*/
+ 
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+    .cancelbtn {
+        width: 100%;
+    }
+}

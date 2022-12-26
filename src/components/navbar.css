@@ -1,0 +1,29 @@
+.logo {
+    float: left;
+    display: block;
+    height: 24px;
+    cursor: pointer;
+    margin-right: 8px;
+    color: white;
+    filter: brightness(0) invert(1);
+    padding-left: 30px;
+  
+}
+
+header{
+    background-color: blue;
+    display: flex;
+    justify-content: flex-start;
+    align-items:center ;
+    padding: 8pxpx 10px;
+    margin-right: auto;
+    
+    
+}
+
+header p{
+    color: white;
+    font-size: 24px;
+    padding-right: 30px;
+    padding-left: 30px;
+}
