@@ -18,7 +18,7 @@ export const Login = () => {
             <input type="password" placeholder="Enter Password" />
  
             <button type="submit" className='lg'>
-              <Link to={'/Menu'}>
+              <Link to={'/Home'}>
                 Login
               </Link>
             </button>
@@ -26,7 +26,7 @@ export const Login = () => {
         </div>
  
         <div className="container" >
-            <button type="button" className="cancelbtn"><Link to={'/Home'} >
+            <button type="button" className="cancelbtn"><Link to={'/'} >
                  SignUp
             </Link>
             </button>

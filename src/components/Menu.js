@@ -15,7 +15,7 @@ export const Menu = () => {
   
 
 
-  const { cartItems,  addItem, removeItem, items } = useContext(FoodContext);
+  const { cartItems,  addItem, removeItem, items, total } = useContext(FoodContext);
 
 
 
@@ -40,6 +40,12 @@ export const Menu = () => {
               <div className="card_content">
                 <h2 className="card_title">{feed.name}</h2>
                 <p className="card_text">Price : {feed.price}</p>
+
+                {cartItems[items[index]['name']]>0 && <p className="card_text">Total : {cartItems[items[index]['name']]}</p> }
+
+                {cartItems[items[index]['name']]>0 && <p className="card_text">Cost (INR) : {cartItems[items[index]['name']] * feed.price}</p>}
+
+                
                 
                 <button className="btn card_btn" onClick={() => addItem(index)}>
                   +

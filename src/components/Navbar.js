@@ -33,7 +33,7 @@ export const Navbar = () => {
       <div id="myModal" className="modal" style={{ display: modalState }}>
         <div className="modal-content">
           
-          <p>Cart Items</p>
+          <p>Order Summary</p>
           <ul>
             {Object.keys(cartItems).map((item, index) => (
               <li key={index}>
