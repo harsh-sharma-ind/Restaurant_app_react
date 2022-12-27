@@ -10,6 +10,7 @@ export const Login = () => {
         
  
         <div className="container">
+          <h1>LOGIN</h1>
             <label><b>Username</b></label>
             <input type="text" placeholder="Enter Username" />
  

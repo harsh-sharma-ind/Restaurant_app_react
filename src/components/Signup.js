@@ -29,6 +29,8 @@ export const Signup = () => {
   };
 
   return (
+    <div>
+      <h1>SIGN UP </h1>
     <form onSubmit={handleSubmit(onSubmit)}>
       <input type="text" placeholder="Full Name..." {...register("fullName")} />
       <p>{errors.fullName?.message}</p>
@@ -44,5 +46,6 @@ export const Signup = () => {
       
       <input type="submit" />
     </form>
+    </div>
   );
 };
