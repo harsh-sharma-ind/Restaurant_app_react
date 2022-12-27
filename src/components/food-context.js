@@ -10,6 +10,7 @@ export const FoodContextProvider = (props) => {
   const [cartItems, setCartItems] = useState({});
   const [modalState, setModalState] = useState("none");
   const [total, setTotal] = useState(0);
+  const [totalcnt, settotalcnt] = useState(0);
   let sum;
 
   const addItem = (id) => {
@@ -18,11 +19,13 @@ export const FoodContextProvider = (props) => {
       
       cartItems[items[id]['name']] += 1;
       setCartItems(cartItems);
+      
     }
     else {
       cartItems[items[id]['name']] = 1;
       setCartItems(cartItems);
     }
+    settotalcnt(totalcnt+1);
     sum = total;
     sum += parseInt(items[id]['price']);
     setTotal(sum);
@@ -38,6 +41,7 @@ export const FoodContextProvider = (props) => {
     else {
       
     }
+    if(totalcnt > 0) settotalcnt(totalcnt-1);
     sum = total;
     sum -= parseInt(items[id]['price']);
     setTotal(sum);
@@ -61,7 +65,8 @@ export const FoodContextProvider = (props) => {
     cartItems,
     total,
     modalState,
-    items
+    items,
+    totalcnt
   };
 
   return (

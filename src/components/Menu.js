@@ -15,7 +15,7 @@ export const Menu = () => {
   
 
 
-  const { cartItems, modalClick, modalClose, modalState, total, addItem, removeItem, items } = useContext(FoodContext);
+  const { cartItems,  addItem, removeItem, items } = useContext(FoodContext);
 
 
 
@@ -23,24 +23,7 @@ export const Menu = () => {
     <div className="main">
       <br />
 
-      <button onClick={modalClick} id="myBtn" className="btn">Bill</button>
-
-      <div id="myModal" className="modal" style={{display: modalState}}>
-        <div className="modal-content">
-          <span onClick={modalClose}  className="close">&times;</span>
-          <p>Cart Items</p>
-          <ul>
-            {Object.keys(cartItems).map((item, index)=> (
-              <li key={index}>{item} : {cartItems[item]} </li>
-            ))}
-          </ul>
-          <p> Total : {total}</p>
-          <button className="btn">
-            <Link to={'/cheakout'}> Cheakout</Link>
-          </button>
-        </div>
-
-      </div>
+      
 
 
 
@@ -64,7 +47,7 @@ export const Menu = () => {
                 <button className="btn card_btn" onClick={() => removeItem(index)} style={{backgroundColor: cartItems[items[index]['name']] ? "DeepPink" : "grey"}}>
                   -
                   </button>
-                {cartItems[items[index]['name']]&& <>({cartItems[items[index]['name']]})</>}
+                
               </div>
             </div>
           </li>
