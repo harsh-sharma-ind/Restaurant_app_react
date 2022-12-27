@@ -3,61 +3,19 @@ import "./Menu.css";
 
 import { Link } from "react-router-dom";
 
-import { useState } from "react";
+import { useContext } from "react";
 
 
 import Feeds from "../data/feeds.json";
 
+import { FoodContext } from "./food-context.js";
+
 export const Menu = () => {
 
-  const items = Feeds;
-  const [cartItems, setCartItems] = useState({});
-  const [modalState, setModalState] = useState("none");
-  const [total, setTotal] = useState(0);
-  let sum;
-
-  const addItem = (id) => {
-    
-    if(cartItems[items[id]['name']] ) {
-      
-      cartItems[items[id]['name']] += 1;
-      setCartItems(cartItems);
-    }
-    else {
-      cartItems[items[id]['name']] = 1;
-      setCartItems(cartItems);
-    }
-    sum = total;
-    sum += parseInt(items[id]['price']);
-    setTotal(sum);
-  }
+  
 
 
-  const removeItem = (id) => {
-    
-    if(cartItems[items[id]['name']] ) {
-      
-      cartItems[items[id]['name']] -= 1;
-      setCartItems(cartItems);
-    }
-    else {
-      
-    }
-    sum = total;
-    sum -= parseInt(items[id]['price']);
-    setTotal(sum);
-  }
-
-
-  const modalClick = () => {
-    
-    setModalState("block");
-    
-  }
-
-  const modalClose = () => {
-    setModalState("none");
-  }
+  const { cartItems, modalClick, modalClose, modalState, total, addItem, removeItem, items } = useContext(FoodContext);
 
 
 
@@ -100,8 +58,12 @@ export const Menu = () => {
                 <h2 className="card_title">{feed.name}</h2>
                 <p className="card_text">Price : {feed.price}</p>
                 
-                <button className="btn card_btn" onClick={() => addItem(index)}>+</button>
-                <button className="btn card_btn" onClick={() => removeItem(index)}>-</button>
+                <button className="btn card_btn" onClick={() => addItem(index)}>
+                  +
+                  </button>
+                <button className="btn card_btn" onClick={() => removeItem(index)} style={{backgroundColor: cartItems[items[index]['name']] ? "DeepPink" : "grey"}}>
+                  -
+                  </button>
                 {cartItems[items[index]['name']]&& <>({cartItems[items[index]['name']]})</>}
               </div>
             </div>
