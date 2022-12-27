@@ -25,7 +25,7 @@ export const Login = () => {
         </div>
  
         <div className="container" >
-            <button type="button" className="cancelbtn"><Link to={'/signup'} >
+            <button type="button" className="cancelbtn"><Link to={'/Home'} >
                  SignUp
             </Link>
             </button>

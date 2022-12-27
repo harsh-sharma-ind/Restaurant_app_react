@@ -24,7 +24,7 @@ export const Signup = () => {
   const navigate = useNavigate();
 
   const onSubmit = (data) => {
-    console.log(data);
+    
     navigate('/login')
   };
 

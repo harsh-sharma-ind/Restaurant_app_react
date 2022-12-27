@@ -10,7 +10,7 @@ export const Home = () => {
     <div className="center">
         <h1>Welcome To Food's Kitchen</h1>
         <button className='gomenu' onClick={handleMenu}>
-          <Link to={'/login'} className='link'>Go To Menu</Link>
+          <Link to={'/menu'} className='link'>Go To Menu</Link>
         </button>
     </div>
   )
